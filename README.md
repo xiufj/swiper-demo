@@ -20,3 +20,49 @@
 - Vite
 
 ## 📦 项目结构
+```
+modern-card-carousel-demo/
+├── public/
+│   └── index.html
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   ├── utils/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── vite-env.d.ts
+├── .gitignore
+├── index.html
+├── package.json
+├── README.md
+└── tsconfig.json
+```
+
+## 🚀 如何使用
+
+1. 克隆项目到本地
+
+```bash
+git clone 
+```
+
+2. 安装依赖
+
+```bash
+cd  ...
+npm install
+```
+
+3. 启动开发服务器
+
+```bash
+npm run dev
+```
+
+4. 打开浏览器访问 `http://localhost:5173` 查看效果
+
+## 📝 注意事项
+
+- 请确保你的开发环境已经安装了 Node.js 和 npm
