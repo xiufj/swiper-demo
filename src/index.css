@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 15px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Swiper 自定义样式 */
+.swiper {
+  padding: 50px 0;
+  width: 100%;
+}
+
+.swiper-slide-custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+/* 移动端样式 */
+@media (max-width: 767px) {
+  .swiper-slide-custom {
+    width: 100% !important;
+  }
+}
+
+/* 平板样式 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .swiper-slide-custom {
+    width: calc(50% - 30px) !important;
+  }
+}
+
+/* 桌面端样式 */
+@media (min-width: 1024px) {
+  .swiper-slide-custom {
+    width: calc(33.333% - 40px) !important;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #D1D5DB;
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  background: #1F2937;
+  opacity: 1;
+}
+
+/* 3D效果增强 */
+.swiper-slide-custom {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.swiper-slide-active {
+  transform: translateZ(50px);
+}
+
+/* 改进卡片阴影效果 */
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  background-image: linear-gradient(to left,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0)) !important;
+}
